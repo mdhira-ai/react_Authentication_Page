@@ -19,6 +19,20 @@ export function Auth({ children }) {
         password: 'hira'
     }
 
+    function SignUp(data){
+        if(data.username === db.user){
+            setIsAuthenticated(false);
+            alert('Already registered');
+        }else{
+            db.user = data.username;
+            db.password = data.password;
+            setIsAuthenticated(true);
+            setUser(data.username);
+            redirect('/');
+
+        }
+    }
+
     function login(data) {
         if (data) {
             if (data.username === db.user && data.password === db.password) {
@@ -39,7 +53,7 @@ export function Auth({ children }) {
     }
 
     return (
-        <AuthProvider.Provider value={{ user, login, logout, isAuthenticated }}>
+        <AuthProvider.Provider value={{ user, login, logout, isAuthenticated ,SignUp}}>
             {children}
         </AuthProvider.Provider>
     );
