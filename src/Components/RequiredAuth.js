@@ -1,11 +1,11 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useAuth } from "./Auth";
+import useAuthStore from "./AuthV2";
 
 function RequiredAuth({ children }) {
-  const auth = useAuth();
+  const isLoggedIn = useAuthStore(state => state.isLoggedIn)
 
-  if (auth.isAuthenticated) {
+  if (isLoggedIn) {
     return <>{children}</>;
   }
   return <>

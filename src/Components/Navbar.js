@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth } from './Auth';
-import RequiredAuth from './RequiredAuth'
+import useAuthStore from './AuthV2'
 
 function Navbar() {
-  const auth = useAuth();
+  const isLoggedIn = useAuthStore(state => state.isLoggedIn)
 
   return (
     <div style={{
@@ -13,7 +12,7 @@ function Navbar() {
     }}>
 
 
-      {auth.isAuthenticated ? (
+      {isLoggedIn ? (
         <>
 
           <Link to="/" style={{ marginLeft: 5 }}>Home 🌎</Link>
