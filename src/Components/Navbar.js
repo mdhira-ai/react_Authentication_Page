@@ -6,10 +6,7 @@ function Navbar() {
   const isLoggedIn = useAuthStore(state => state.isLoggedIn)
 
   return (
-    <div style={{
-      fontSize: 20,
-      marginBottom: 20,
-    }}>
+    <div className="">
 
 
       {isLoggedIn ? (

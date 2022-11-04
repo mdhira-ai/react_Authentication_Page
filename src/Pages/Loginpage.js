@@ -2,6 +2,7 @@ import React from 'react'
 import { useRef } from 'react'
 import { Navigate } from 'react-router-dom'
 import useAuthStore from '../Components/AuthV2'
+import Navbar from '../Components/Navbar'
 
 
 function LPage() {
@@ -21,19 +22,21 @@ function LPage() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className=" mx-auto flex flex-col space-y-8 bg-blue-500 p-4 h-screen items-center justify-center ">
+      <Navbar />
+      
+      <form onSubmit={handleSubmit} className="shadow-xl rounded-xl bg-blue-400 p-14 flex flex-col space-y-6">
 
-        <div>
-          <label htmlFor="email">Email</label>
-          <input ref={email} type="email" name="email" id="email" />
+        <div className="item-center">
+          <label htmlFor="email" className='mr-11'>Email :</label>
+          <input ref={email} className="rounded-md px-2" type="email" name="email" id="email" />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
-          <input ref={password} type="password" name="password" id="password" />
+          <label htmlFor="password" className="mr-4">Password :</label>
+          <input ref={password} className="rounded-md px-2" type="password" name="password" id="password" />
         </div>
         <div>
-          <input type="submit" value="Login" />
+          <input className='p-3 min-w-full bg-slate-900 rounded-md text-gray-300 text-sm' type="submit" value="Login" />
         </div>
 
       </form>

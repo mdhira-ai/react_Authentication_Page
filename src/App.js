@@ -11,7 +11,6 @@ import RequiredAuth from "./Components/RequiredAuth";
 function App() {
   return (
     <>
-        <Navbar />
         <Routes>
           <Route path="/login" element={<Loginpage />} />
           <Route path="/signup" element={<Signuppage />} />
