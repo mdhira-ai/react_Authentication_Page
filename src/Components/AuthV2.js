@@ -3,8 +3,8 @@ import { persist } from "zustand/middleware"
 
 let store = (set) => ({
   user: {
-    email: '',
-    password: '',
+    phonenumber: '4312753208',
+    password: '123456',
   },
   
   isLoggedIn: false,

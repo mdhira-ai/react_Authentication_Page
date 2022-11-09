@@ -16,7 +16,7 @@ function Profile() {
           fontSize: 40,
         }}
       >
-        Welcome to 🙋 {user.email}
+        Welcome to 🙋 {user.phonenumber}
       </div>
       <div>
         <input type="button" value="Logout" onClick={() => logout()} />

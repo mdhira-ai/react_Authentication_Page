@@ -19,10 +19,13 @@ function Navbar() {
       ) : (
         <>
 
+        <div className="space-y-10 text-xl font-mono text-slate-50 ">
 
-          <Link to="/login" style={{ marginLeft: 5 }}>Login</Link>
-          <Link to="/signup" style={{ marginLeft: 5 }}>Signup</Link>
+          <Link className=' hover:text-blue-700' to="/login" style={{ marginLeft: 5 }}>Login</Link>
+          <span> /</span>
+          <Link className=' hover:text-blue-700' to="/signup" style={{ marginLeft: 5 }}>Signup</Link>
 
+        </div>
         </>
 
       )}
